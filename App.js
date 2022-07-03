@@ -1,31 +1,38 @@
-import { Button, StyleSheet, TextInput, View } from "react-native";
+import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function App() {
    return (
-      <View style={styles.screen}>
-         <View style={styles.inputContainer}>
-            <TextInput placeholder="inglrese aqui" style={styles.lala} />
-            <Button title="Add" onPress={() => {}} />
+      <>
+         <Text>Hola, Coder!</Text>
+         <View style={styles.screen}>
+            <View style={styles.inputContainer}>
+               <Text>Email</Text>
+               <TextInput placeholder="Ingrese Email" style={styles.lala} />              
+               <Text>Constraseña</Text>
+               <TextInput placeholder="Ingrese Contraseña" />
+               <Button title="Add" onPress={() => {}} />
+            </View>
          </View>
-      </View>
+      </>
    );
 }
 
 const styles = StyleSheet.create({
    //screen se le pone al contenedor padre
    screen: {
-      flex: 1,
+      flex: 2,
       backgroundColor: "#fff",
       alignItems: "center",
       justifyContent: "center",
+      flexDirection: "column"
    },
    inputContainer: {
-      flexDirection: "row",
+      flexDirection: "column",
       justifyContent: "space-around",
       alignContent: "center",
    },
    lala: {
       borderBottomColor: "black",
-      width: "80%",
+      width: "100%",
    },
 });
